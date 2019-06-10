@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "314537886267",
+    "firebase_url": "https://feed-application.firebaseio.com",
+    "project_id": "feed-application",
+    "storage_bucket": "feed-application.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:314537886267:android:5ea0ecc4391b41ad",
+        "android_client_info": {
+          "package_name": "com.vishnu.feedapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "314537886267-8arf948idr7ds7c2drkgde76s48slcj8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vishnu.feedapplication",
+            "certificate_hash": "ff6445770106239ddb273ea7b1328d746f529a0e"
+          }
+        },
+        {
+          "client_id": "314537886267-ak7v17lkhpv65mk7sp786tt6qlk663bt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7L_KxLO6yCR_QWDrZ9rfo8-eOmzyfyyw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "314537886267-ak7v17lkhpv65mk7sp786tt6qlk663bt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
