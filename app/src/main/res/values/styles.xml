@@ -13,4 +13,9 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="DialogScaling50">
+        <item name="android:windowEnterAnimation">@anim/scaleoutfrom50</item>
+        <item name="android:windowExitAnimation">@anim/scaleinto50</item>
+    </style>
+
 </resources>

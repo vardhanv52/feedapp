@@ -35,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/msg1"
-            android:text="Welcome back,"
+            android:text="Welcome,"
             android:textStyle="bold"
             android:textSize="25sp"
             android:textColor="@color/grey"

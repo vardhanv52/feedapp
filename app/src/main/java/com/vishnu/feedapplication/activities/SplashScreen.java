@@ -8,11 +8,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.vishnu.feedapplication.R;
 
 public class SplashScreen extends AppCompatActivity
 {
     private Context context;
+    FirebaseAuth auth = FirebaseAuth.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +24,10 @@ public class SplashScreen extends AppCompatActivity
         TextView textView = findViewById(R.id.app_name);
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/keepcalm-medium.ttf");
         textView.setTypeface(typeface);
-        startTransition(false);
+        if(auth.getCurrentUser() != null)
+            startTransition(true);
+        else
+            startTransition(false);
     }
 
     void startTransition(boolean isLoggedIn) {
