@@ -1,5 +1,7 @@
 package com.vishnu.feedapplication.utils;
 
+import java.text.SimpleDateFormat;
+
 public class Constants
 {
     public static String userPreferencesName = "FeedApplicationUser",
@@ -19,5 +21,7 @@ public class Constants
 
     public static String valTrue = "TRUE",
     valFalse = "FALSE";
+
+    public static SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd hh:mm a");
 
 }

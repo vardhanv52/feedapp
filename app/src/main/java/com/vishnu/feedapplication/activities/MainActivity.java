@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.vishnu.feedapplication.R;
@@ -24,6 +25,9 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         context = this;
+        findViewById(R.id.createPost).setOnClickListener(v -> {
+            startActivity(new Intent(context, PostActivity.class));
+        });
     }
 
     @Override
