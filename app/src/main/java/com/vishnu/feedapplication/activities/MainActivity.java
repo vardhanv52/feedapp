@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity
     private PostsAdapter adapter;
     private String lastKey;
     private ProgressBar progressBar;
-    private TextView noPosts;
+    private TextView noPosts, user_name, user_email;
     private boolean isLoading, noMorePosts;
     private int UPDATE_POST = 500, ADD_POST = 1000, currentEditingPosition;
 
@@ -58,9 +58,9 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         context = this;
         findViewById(R.id.createPost).setOnClickListener(v -> startActivityForResult(new Intent(context, PostActivity.class), ADD_POST));
-        progressBar = findViewById(R.id.extra_content);
-        recyclerView = findViewById(R.id.posts);
-        noPosts = findViewById(R.id.noPosts);
+        binding();
+        user_name.setText(auth.getCurrentUser().getDisplayName());
+        user_email.setText(auth.getCurrentUser().getEmail());
         LinearLayoutManager manager = new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(manager);
         adapter = new PostsAdapter(context, posts, this);
@@ -88,6 +88,14 @@ public class MainActivity extends AppCompatActivity
             }
         });
         getInitialData();
+    }
+
+    void binding() {
+        progressBar = findViewById(R.id.extra_content);
+        recyclerView = findViewById(R.id.posts);
+        noPosts = findViewById(R.id.noPosts);
+        user_name = findViewById(R.id.user_name);
+        user_email = findViewById(R.id.user_email);
     }
 
     void getInitialData()
