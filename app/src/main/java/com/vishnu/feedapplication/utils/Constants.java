@@ -24,6 +24,6 @@ public class Constants
 
     public static SimpleDateFormat format = new SimpleDateFormat("yyyy-MMM-dd hh:mm a");
 
-    public static int paginationCount = 6;
+    public static int paginationCount = 10;
 
 }
