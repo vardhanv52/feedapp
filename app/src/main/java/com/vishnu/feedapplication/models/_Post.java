@@ -17,17 +17,16 @@ public class _Post implements Serializable
     private String id;
     private String post_id;
 
-    public _Post(Context context, String message, boolean isUpdating) {
-        if(isUpdating) {
-            this.message = message;
-            this.updatedAt = Constants.format.format(new Date());
-        } else {
-            this.message = message;
-            this.name = Helper.getUserData(context, Constants.keyDisplayName);
-            this.createdAT = Constants.format.format(new Date());
-            this.updatedAt = this.createdAT;
-            this.id = FirebaseAuth.getInstance().getCurrentUser().getUid();
-        }
+    public _Post() {
+
+    }
+
+    public _Post(Context context, String message) {
+        this.message = message;
+        this.name = Helper.getUserData(context, Constants.keyDisplayName);
+        this.createdAT = Constants.format.format(new Date());
+        this.updatedAt = this.createdAT;
+        this.id = FirebaseAuth.getInstance().getCurrentUser().getUid();
     }
 
     public String getCreatedAT() {

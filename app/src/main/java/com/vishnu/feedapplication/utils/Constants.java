@@ -22,6 +22,8 @@ public class Constants
     public static String valTrue = "TRUE",
     valFalse = "FALSE";
 
-    public static SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd hh:mm a");
+    public static SimpleDateFormat format = new SimpleDateFormat("yyyy-MMM-dd hh:mm a");
+
+    public static int paginationCount = 6;
 
 }

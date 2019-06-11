@@ -28,10 +28,36 @@
         android:layout_height="2dp"
         android:background="@color/grey" />
 
-    <android.support.v7.widget.RecyclerView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/posts"
-        android:layout_margin="15dp"/>
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/posts"
+            android:layout_margin="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/noPosts"
+            android:textColor="@color/error"
+            android:layout_centerInParent="true"
+            android:text="No Posts Found"
+            android:visibility="gone"
+            android:textSize="20sp"/>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/extra_content"
+            android:indeterminate="true"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp"/>
+
+    </RelativeLayout>
 
 </LinearLayout>
